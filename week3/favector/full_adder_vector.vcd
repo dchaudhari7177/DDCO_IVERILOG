@@ -1,0 +1,87 @@
+$date
+	Thu Sep 12 21:07:12 2024
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module full_adder_vector_tb $end
+$var wire 2 ! sum1 [1:0] $end
+$var wire 1 " cout1 $end
+$var reg 3 # i1 [2:0] $end
+$var reg 1 $ i2 $end
+$scope module dut $end
+$var wire 3 % i1 [2:0] $end
+$var wire 1 $ i2 $end
+$var wire 2 & sum1 [1:0] $end
+$var wire 1 " cout1 $end
+$var wire 1 ' c_out $end
+$scope module fa0 $end
+$var wire 1 ( a $end
+$var wire 1 $ b $end
+$var wire 1 ) cin $end
+$var wire 1 ' cout $end
+$var wire 1 * sum $end
+$upscope $end
+$scope module fa1 $end
+$var wire 1 + a $end
+$var wire 1 , b $end
+$var wire 1 ' cin $end
+$var wire 1 " cout $end
+$var wire 1 - sum $end
+$upscope $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+0-
+0,
+0+
+0*
+0)
+0(
+0'
+b0 &
+b0 %
+0$
+b0 #
+0"
+b0 !
+$end
+#10000
+b10 !
+b10 &
+1-
+1'
+1(
+1$
+b1 #
+b1 %
+#20000
+0"
+0'
+1-
+b11 !
+b11 &
+1*
+1+
+0$
+b11 #
+b11 %
+#30000
+1"
+0-
+1'
+b0 !
+b0 &
+0*
+1$
+b111 #
+b111 %
+#40000

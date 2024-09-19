@@ -1,0 +1,126 @@
+#! /c/Source/iverilog-install/bin/vvp
+:ivl_version "12.0 (devel)" "(s20150603-1539-g2693dd32b)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision - 12;
+:vpi_module "C:\iverilog\lib\ivl\system.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_sys.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_textio.vpi";
+:vpi_module "C:\iverilog\lib\ivl\v2005_math.vpi";
+:vpi_module "C:\iverilog\lib\ivl\va_math.vpi";
+S_0000027e1df1cff0 .scope module, "full_adder_vector_tb" "full_adder_vector_tb" 2 3;
+ .timescale -9 -12;
+v0000027e1dde9e90_0 .net "cout1", 0 0, L_0000027e1ddf2a90;  1 drivers
+v0000027e1ddea1b0_0 .var "i1", 2 0;
+v0000027e1dde90d0_0 .var "i2", 0 0;
+v0000027e1dde9170_0 .net "sum1", 1 0, L_0000027e1dde9030;  1 drivers
+S_0000027e1df1d180 .scope module, "dut" "full_adder_vector" 2 10, 3 1 0, S_0000027e1df1cff0;
+ .timescale 0 0;
+    .port_info 0 /INPUT 3 "i1";
+    .port_info 1 /INPUT 1 "i2";
+    .port_info 2 /OUTPUT 2 "sum1";
+    .port_info 3 /OUTPUT 1 "cout1";
+v0000027e1dd89270_0 .net "c_out", 0 0, L_0000027e1ddf2940;  1 drivers
+v0000027e1dd89310_0 .net "cout1", 0 0, L_0000027e1ddf2a90;  alias, 1 drivers
+v0000027e1dd893b0_0 .net "i1", 2 0, v0000027e1ddea1b0_0;  1 drivers
+v0000027e1dde9d50_0 .net "i2", 0 0, v0000027e1dde90d0_0;  1 drivers
+v0000027e1ddea110_0 .net "sum1", 1 0, L_0000027e1dde9030;  alias, 1 drivers
+L_0000027e1dde9ad0 .part v0000027e1ddea1b0_0, 0, 1;
+L_0000027e1dde8950 .part v0000027e1ddea1b0_0, 1, 1;
+L_0000027e1dde9030 .concat8 [ 1 1 0 0], L_0000027e1dd859c0, L_0000027e1ddf2fd0;
+S_0000027e1dd95a00 .scope module, "fa0" "full_adder" 3 10, 4 1 0, S_0000027e1df1d180;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "a";
+    .port_info 1 /INPUT 1 "b";
+    .port_info 2 /INPUT 1 "cin";
+    .port_info 3 /OUTPUT 1 "sum";
+    .port_info 4 /OUTPUT 1 "cout";
+L_0000027e1dd85cd0 .functor XOR 1, L_0000027e1dde9ad0, v0000027e1dde90d0_0, C4<0>, C4<0>;
+L_0000027e1ddf3898 .functor BUFT 1, C4<0>, C4<0>, C4<0>, C4<0>;
+L_0000027e1dd859c0 .functor XOR 1, L_0000027e1dd85cd0, L_0000027e1ddf3898, C4<0>, C4<0>;
+L_0000027e1dd85b80 .functor AND 1, L_0000027e1dde9ad0, v0000027e1dde90d0_0, C4<1>, C4<1>;
+L_0000027e1dd85870 .functor AND 1, L_0000027e1dde9ad0, L_0000027e1ddf3898, C4<1>, C4<1>;
+L_0000027e1dd85aa0 .functor OR 1, L_0000027e1dd85b80, L_0000027e1dd85870, C4<0>, C4<0>;
+L_0000027e1dd85d40 .functor AND 1, v0000027e1dde90d0_0, L_0000027e1ddf3898, C4<1>, C4<1>;
+L_0000027e1ddf2940 .functor OR 1, L_0000027e1dd85aa0, L_0000027e1dd85d40, C4<0>, C4<0>;
+v0000027e1dd88f50_0 .net *"_ivl_0", 0 0, L_0000027e1dd85cd0;  1 drivers
+v0000027e1dd899f0_0 .net *"_ivl_10", 0 0, L_0000027e1dd85d40;  1 drivers
+v0000027e1dd891d0_0 .net *"_ivl_4", 0 0, L_0000027e1dd85b80;  1 drivers
+v0000027e1dd896d0_0 .net *"_ivl_6", 0 0, L_0000027e1dd85870;  1 drivers
+v0000027e1dd89810_0 .net *"_ivl_8", 0 0, L_0000027e1dd85aa0;  1 drivers
+v0000027e1dd898b0_0 .net "a", 0 0, L_0000027e1dde9ad0;  1 drivers
+v0000027e1dd89d10_0 .net "b", 0 0, v0000027e1dde90d0_0;  alias, 1 drivers
+v0000027e1dd89b30_0 .net "cin", 0 0, L_0000027e1ddf3898;  1 drivers
+v0000027e1dd894f0_0 .net "cout", 0 0, L_0000027e1ddf2940;  alias, 1 drivers
+v0000027e1dd89590_0 .net "sum", 0 0, L_0000027e1dd859c0;  1 drivers
+S_0000027e1dd95b90 .scope module, "fa1" "full_adder" 3 18, 4 1 0, S_0000027e1df1d180;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "a";
+    .port_info 1 /INPUT 1 "b";
+    .port_info 2 /INPUT 1 "cin";
+    .port_info 3 /OUTPUT 1 "sum";
+    .port_info 4 /OUTPUT 1 "cout";
+L_0000027e1ddf38e0 .functor BUFT 1, C4<0>, C4<0>, C4<0>, C4<0>;
+L_0000027e1ddf3120 .functor XOR 1, L_0000027e1dde8950, L_0000027e1ddf38e0, C4<0>, C4<0>;
+L_0000027e1ddf2fd0 .functor XOR 1, L_0000027e1ddf3120, L_0000027e1ddf2940, C4<0>, C4<0>;
+L_0000027e1ddf3660 .functor AND 1, L_0000027e1dde8950, L_0000027e1ddf38e0, C4<1>, C4<1>;
+L_0000027e1ddf3350 .functor AND 1, L_0000027e1dde8950, L_0000027e1ddf2940, C4<1>, C4<1>;
+L_0000027e1ddf3510 .functor OR 1, L_0000027e1ddf3660, L_0000027e1ddf3350, C4<0>, C4<0>;
+L_0000027e1ddf3040 .functor AND 1, L_0000027e1ddf38e0, L_0000027e1ddf2940, C4<1>, C4<1>;
+L_0000027e1ddf2a90 .functor OR 1, L_0000027e1ddf3510, L_0000027e1ddf3040, C4<0>, C4<0>;
+v0000027e1dd89950_0 .net *"_ivl_0", 0 0, L_0000027e1ddf3120;  1 drivers
+v0000027e1dd89630_0 .net *"_ivl_10", 0 0, L_0000027e1ddf3040;  1 drivers
+v0000027e1dd89c70_0 .net *"_ivl_4", 0 0, L_0000027e1ddf3660;  1 drivers
+v0000027e1dd89db0_0 .net *"_ivl_6", 0 0, L_0000027e1ddf3350;  1 drivers
+v0000027e1dd89bd0_0 .net *"_ivl_8", 0 0, L_0000027e1ddf3510;  1 drivers
+v0000027e1dd88ff0_0 .net "a", 0 0, L_0000027e1dde8950;  1 drivers
+v0000027e1dd89770_0 .net "b", 0 0, L_0000027e1ddf38e0;  1 drivers
+v0000027e1dd89090_0 .net "cin", 0 0, L_0000027e1ddf2940;  alias, 1 drivers
+v0000027e1dd89130_0 .net "cout", 0 0, L_0000027e1ddf2a90;  alias, 1 drivers
+v0000027e1dd89450_0 .net "sum", 0 0, L_0000027e1ddf2fd0;  1 drivers
+    .scope S_0000027e1df1cff0;
+T_0 ;
+    %pushi/vec4 0, 0, 3;
+    %store/vec4 v0000027e1ddea1b0_0, 0, 3;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0000027e1dde90d0_0, 0, 1;
+    %delay 10000, 0;
+    %vpi_call 2 22 "$display", "i1 = %b, i2 = %b, sum1 = %b, cout1 = %b", v0000027e1ddea1b0_0, v0000027e1dde90d0_0, v0000027e1dde9170_0, v0000027e1dde9e90_0 {0 0 0};
+    %pushi/vec4 1, 0, 3;
+    %store/vec4 v0000027e1ddea1b0_0, 0, 3;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0000027e1dde90d0_0, 0, 1;
+    %delay 10000, 0;
+    %vpi_call 2 27 "$display", "i1 = %b, i2 = %b, sum1 = %b, cout1 = %b", v0000027e1ddea1b0_0, v0000027e1dde90d0_0, v0000027e1dde9170_0, v0000027e1dde9e90_0 {0 0 0};
+    %pushi/vec4 3, 0, 3;
+    %store/vec4 v0000027e1ddea1b0_0, 0, 3;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0000027e1dde90d0_0, 0, 1;
+    %delay 10000, 0;
+    %vpi_call 2 32 "$display", "i1 = %b, i2 = %b, sum1 = %b, cout1 = %b", v0000027e1ddea1b0_0, v0000027e1dde90d0_0, v0000027e1dde9170_0, v0000027e1dde9e90_0 {0 0 0};
+    %pushi/vec4 7, 0, 3;
+    %store/vec4 v0000027e1ddea1b0_0, 0, 3;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0000027e1dde90d0_0, 0, 1;
+    %delay 10000, 0;
+    %vpi_call 2 37 "$display", "i1 = %b, i2 = %b, sum1 = %b, cout1 = %b", v0000027e1ddea1b0_0, v0000027e1dde90d0_0, v0000027e1dde9170_0, v0000027e1dde9e90_0 {0 0 0};
+    %vpi_call 2 39 "$finish" {0 0 0};
+    %end;
+    .thread T_0;
+    .scope S_0000027e1df1cff0;
+T_1 ;
+    %vpi_call 2 43 "$dumpfile", "full_adder_vector.vcd" {0 0 0};
+    %vpi_call 2 44 "$dumpvars", 32'sb00000000000000000000000000000000, S_0000027e1df1cff0 {0 0 0};
+    %end;
+    .thread T_1;
+    .scope S_0000027e1df1cff0;
+T_2 ;
+    %vpi_call 2 48 "$monitor", "Time=%0d, i1=%b, i2=%b, sum1=%b, cout1=%b", $time, v0000027e1ddea1b0_0, v0000027e1dde90d0_0, v0000027e1dde9170_0, v0000027e1dde9e90_0 {0 0 0};
+    %end;
+    .thread T_2;
+# The file index is used to find the file name in the following table.
+:file_names 5;
+    "N/A";
+    "<interactive>";
+    "full_adder_vector_tb.v";
+    "full_adder_vector.v";
+    "full_adder.v";

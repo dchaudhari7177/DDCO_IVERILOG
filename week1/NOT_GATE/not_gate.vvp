@@ -1,0 +1,55 @@
+#! /opt/homebrew/Cellar/icarus-verilog/12.0/bin/vvp
+:ivl_version "12.0 (stable)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision + 0;
+:vpi_module "/opt/homebrew/Cellar/icarus-verilog/12.0/lib/ivl/system.vpi";
+:vpi_module "/opt/homebrew/Cellar/icarus-verilog/12.0/lib/ivl/vhdl_sys.vpi";
+:vpi_module "/opt/homebrew/Cellar/icarus-verilog/12.0/lib/ivl/vhdl_textio.vpi";
+:vpi_module "/opt/homebrew/Cellar/icarus-verilog/12.0/lib/ivl/v2005_math.vpi";
+:vpi_module "/opt/homebrew/Cellar/icarus-verilog/12.0/lib/ivl/va_math.vpi";
+S_0x124e060b0 .scope module, "not_gate" "not_gate" 2 1;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "a";
+    .port_info 1 /OUTPUT 1 "y";
+o0x118008010 .functor BUFZ 1, C4<z>; HiZ drive
+L_0x124e121d0 .functor NOT 1, o0x118008010, C4<0>, C4<0>, C4<0>;
+v0x124e063a0_0 .net "a", 0 0, o0x118008010;  0 drivers
+v0x124e11fe0_0 .net "y", 0 0, L_0x124e121d0;  1 drivers
+S_0x124e06220 .scope module, "not_test" "not_test" 3 1;
+ .timescale 0 0;
+L_0x124e12290 .functor NOT 1, v0x124e12090_0, C4<0>, C4<0>, C4<0>;
+v0x124e12090_0 .var "a", 0 0;
+v0x124e12130_0 .net "y", 0 0, L_0x124e12290;  1 drivers
+    .scope S_0x124e06220;
+T_0 ;
+    %delay 0, 0;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x124e12090_0, 0, 1;
+    %delay 100, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x124e12090_0, 0, 1;
+    %delay 100, 0;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x124e12090_0, 0, 1;
+    %delay 100, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x124e12090_0, 0, 1;
+    %end;
+    .thread T_0;
+    .scope S_0x124e06220;
+T_1 ;
+    %vpi_call 3 12 "$monitor", $time, "a=%b, y=%b", v0x124e12090_0, v0x124e12130_0 {0 0 0};
+    %end;
+    .thread T_1;
+    .scope S_0x124e06220;
+T_2 ;
+    %vpi_call 3 15 "$dumpfile", "not_test.vcd" {0 0 0};
+    %vpi_call 3 16 "$dumpvars", 32'sb00000000000000000000000000000000, S_0x124e06220 {0 0 0};
+    %end;
+    .thread T_2;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "not_gate.v";
+    "test_bench.v";
