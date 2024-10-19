@@ -1,0 +1,207 @@
+$date
+	Sat Oct 19 22:49:03 2024
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module tb_counter_control $end
+$var wire 4 ! q [3:0] $end
+$var reg 1 " clk $end
+$var reg 1 # mode $end
+$var reg 1 $ rst_n $end
+$scope module uut $end
+$var wire 1 " clk $end
+$var wire 1 # mode $end
+$var wire 1 $ rst_n $end
+$var wire 4 % q_ring [3:0] $end
+$var wire 4 & q_johnson [3:0] $end
+$var wire 4 ' q [3:0] $end
+$scope module jc $end
+$var wire 1 " clk $end
+$var wire 1 $ rst_n $end
+$var reg 4 ( q [3:0] $end
+$upscope $end
+$scope module rc $end
+$var wire 1 " clk $end
+$var wire 1 $ rst_n $end
+$var reg 4 ) q [3:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+b1000 )
+b0 (
+b1000 '
+b0 &
+b1000 %
+0$
+0#
+0"
+b1000 !
+$end
+#5
+1"
+#10
+0"
+1$
+#15
+b1 !
+b1 '
+b1 %
+b1 )
+b1000 &
+b1000 (
+1"
+#20
+0"
+#25
+b10 !
+b10 '
+b100 &
+b100 (
+b10 %
+b10 )
+1"
+#30
+0"
+#35
+b100 !
+b100 '
+b100 %
+b100 )
+b1010 &
+b1010 (
+1"
+#40
+0"
+#45
+b1000 !
+b1000 '
+b101 &
+b101 (
+b1000 %
+b1000 )
+1"
+#50
+0"
+#55
+b1 !
+b1 '
+b1 %
+b1 )
+b1010 &
+b1010 (
+1"
+#60
+b1010 !
+b1010 '
+0"
+1#
+#65
+b101 !
+b101 '
+b101 &
+b101 (
+b10 %
+b10 )
+1"
+#70
+0"
+#75
+b1010 !
+b1010 '
+b100 %
+b100 )
+b1010 &
+b1010 (
+1"
+#80
+0"
+#85
+b101 !
+b101 '
+b101 &
+b101 (
+b1000 %
+b1000 )
+1"
+#90
+0"
+#95
+b1010 !
+b1010 '
+b1 %
+b1 )
+b1010 &
+b1010 (
+1"
+#100
+0"
+#105
+b101 !
+b101 '
+b101 &
+b101 (
+b10 %
+b10 )
+1"
+#110
+0"
+#115
+b1010 !
+b1010 '
+b100 %
+b100 )
+b1010 &
+b1010 (
+1"
+#120
+0"
+#125
+b101 !
+b101 '
+b101 &
+b101 (
+b1000 %
+b1000 )
+1"
+#130
+0"
+#135
+b1010 !
+b1010 '
+b1 %
+b1 )
+b1010 &
+b1010 (
+1"
+#140
+0"
+#145
+b101 !
+b101 '
+b101 &
+b101 (
+b10 %
+b10 )
+1"
+#150
+0"
+#155
+b1010 !
+b1010 '
+b100 %
+b100 )
+b1010 &
+b1010 (
+1"
+#160
+0"
